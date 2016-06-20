@@ -11,7 +11,7 @@ gulp.task('html', ['styles', 'fonts'], function () {
   gulp.src(['.tmp/fonts/**/*'])
     .pipe(gulp.dest('dist/fonts'));
 
-  return gulp.src(['app/**/*.html'])
+  return gulp.src(['dist/**/*.html'])
     .pipe(assets)
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', cssChannel()))
