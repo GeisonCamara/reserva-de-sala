@@ -10,7 +10,13 @@
       "main": [
         "assets/stylesheets/_bootstrap.scss",
         "assets/fonts/bootstrap/*",
-        "assets/javascripts/bootstrap.js"
+        "assets/javascripts/bootstrap.js",
+        "../bootstrap-adapted/modal.scss",
+        "../bootstrap-adapted/nav.scss",
+        "../jquery-ui/themes/smoothness/jquery-ui.scss",
+        "../bootstrap-tokenfield/sass/tokenfield-typeahead.scss",
+        "../bootstrap-tokenfield/sass/bootstrap-tokenfield.scss",
+        "../bootstrap-datepicker/sass/bootstrap-datepicker3.scss"
       ]
     }
   }
