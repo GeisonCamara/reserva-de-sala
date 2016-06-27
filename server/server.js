@@ -1,7 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
-var mysql = require('mysql');
+//var mysql = require('mysql');
 var connection  = require('express-myconnection');
 var routes = require('./routes/routes');
 var api = require('./api/api');
@@ -26,16 +26,6 @@ function Server() {
     
     // Returns middleware that parses cookies
     app.use(cookieParser());
-    
-    app.use(
-        connection(mysql,{
-            host: 'localhost',
-            user: 'root',
-            password : 'usbw',
-            port : 3307, //port mysql
-            database:'test'
-        }, 'request')
-    );
 
     routes(app);
     api(app);
