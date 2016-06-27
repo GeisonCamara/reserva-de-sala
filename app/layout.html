@@ -14,78 +14,14 @@
         <!-- build:css styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
-    </head>
-    <body>
-        <!--[if lt IE 10]>
-          <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <div class="modal fade" id="myModalReuniao" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">×</button>
-                        <h4>Reserva de sala</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form role="form">
-                            <div class="form-group pull-right tamanho">
-                                <label for="usr">Participantes:</label>
-                                <div class="textarea-container">
-                                      <textarea></textarea>
-                                     <div class="textarea-size"></div>
-                                </div>
-                            </div>
-                            <div class="form-group tamanho" id="form-reservar">
-                                <label for="sel1">Data:</label>
-                                <div>
-                                   <input type="text" class="form-control" id="usr" readonly>
-                                    <span class="add-on"><i class="icon-calendar"></i></span>
-                                </div>
-                            </div>
-                            <div class="form-group tamanho">
-                                <label for="sel1">Sala:</label>
-                                <select class="form-control" id="sel1">
-                                    <option>Sala de reuniões 1</option>
-                                    <option>Sala de reuniões 2</option>
-                                </select>
-                            </div>
-                            <div class="form-group tamanho">
-                                <label for="sel1">Horário:</label>
-                                <select class="form-control" id="sel1">
-                                    <option>8:30 - 9:00</option>
-                                    <option>9:00 - 9:30</option>
-                                    <option>9:30 - 10:00</option>
-                                    <option>10:00 - 10:30</option>
-                                    <option>10:30 - 11:00</option>
-                                    <option>11:00 - 11:30</option>
-                                </select>
-                            </div>
-                            <div class="form-group tamanho">
-                                <label for="usr">Responsável:</label>
-                                <input type="text" class="form-control" id="usr">
-                            </div>
-                            <div class="form-group tamanho">
-                                <label for="usr">Pauta:</label>
-                                <input type="text" class="form-control" id="usr">
-                            </div>
-                            <div class="form-group">
-                                <br>
-                                <button type="submit" class="btn custom pull-left">Reservar</button>
-                                <button type="reset" class="btn custom pull-right" data-dismiss="modal">Cancelar</button>
-                                <br><br><br>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <%= contents %>
+
         <!-- build:js js/vendor.js -->
         <!-- bower:js -->
         <script src="/bower_components/jquery/dist/jquery.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:js scripts/plugins.js -->
+        <script src="/bower_components/jquery-ui/jquery-ui.js"></script>
         <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
         <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
         <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
@@ -101,10 +37,86 @@
 
         <script src="/bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
         <script src="/bower_components/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt-BR.js"></script>
-</head>
+
+        <script src="/bower_components/bootstrap-tokenfield/dist/bootstrap-tokenfield.js"></script>
         <!-- endbuild -->
         <!-- build:js js/main.js -->
         <script src="js/main.js"></script>
         <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+          <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="modal fade" id="myModalReuniao" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4>Reserva de sala</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form role="form">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group" id="form-reservar">
+                                        <label for="data" id="fieldDate">Data:</label>
+                                        <div>
+                                            <input type="text" class="form-control" id="data" readonly/>
+                                            <span class="add-on"><i class="icon-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="sala">Sala:</label>
+                                        <select class="form-control" id="sala">
+                                            <option>Sala de reuniões 1</option>
+                                            <option>Sala de reuniões 2</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="horario">Horário:</label>
+                                        <select class="form-control" id="horario">
+                                            <option>8:30 - 9:00</option>
+                                            <option>9:00 - 9:30</option>
+                                            <option>9:30 - 10:00</option>
+                                            <option>10:00 - 10:30</option>
+                                            <option>10:30 - 11:00</option>
+                                            <option>11:00 - 11:30</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="responsavel">Responsável:</label>
+                                        <input type="text" class="form-control" id="responsavel"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pauta">Pauta:</label>
+                                        <input type="text" class="form-control" id="pauta"/>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="participantes">Participantes:</label>
+                                        <input type="text" class="form-control" id="tokenfield" />
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <button type="button" class="btn btn-default btn-lg btn-block">Reservar</button>
+                                </div>
+                                <div class="col-sm-6">
+                                    <button type="reset" id="reset" class="btn btn-default btn-lg btn-block" data-dismiss="modal">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%= contents %>
     </body>
 </html>
