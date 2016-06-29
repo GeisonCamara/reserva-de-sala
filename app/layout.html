@@ -5,7 +5,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Reserva de salas</title>
-         <!-- Place favicon.ico in the root directory -->
+        <!-- Place favicon.ico in the root directory -->
         <link rel="icon" href="favicon.ico">
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
@@ -13,35 +13,6 @@
         <!-- endbuild -->
         <!-- build:css styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
-
-        <!-- build:js js/vendor.js -->
-        <!-- bower:js -->
-        <script src="/bower_components/jquery/dist/jquery.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
-        <!-- build:js scripts/plugins.js -->
-        <script src="/bower_components/jquery-ui/jquery-ui.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
-
-        <script src="/bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-        <script src="/bower_components/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt-BR.js"></script>
-
-        <script src="/bower_components/bootstrap-tokenfield/dist/bootstrap-tokenfield.js"></script>
-        <!-- endbuild -->
-        <!-- build:js js/main.js -->
-        <script src="js/main.js"></script>
         <!-- endbuild -->
     </head>
     <body>
@@ -60,10 +31,9 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group" id="form-reservar">
-                                        <label for="data" id="fieldDate">Data:</label>
+                                        <label for="sel1">Data:</label>
                                         <div>
-                                            <input type="text" class="form-control" id="data" readonly/>
-                                            <span class="add-on"><i class="icon-calendar"></i></span>
+                                            <input type="text" class="form-control" id="data" readonly />
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -96,7 +66,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="participantes">Participantes:</label>
-                                        <input type="text" class="form-control" id="tokenfield" />
+                                        <input type="text" class="form-control" id="participantes"/>
                                     </div>
                                 </div>
                             </div>
@@ -118,5 +88,30 @@
             </div>
         </div>
         <%= contents %>
+        <!-- build:js js/vendor.js -->
+        <!-- bower:js -->
+        <script src="/bower_components/jquery/dist/jquery.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:js scripts/plugins.js -->
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+
+        <script src="/bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script src="/bower_components/bootstrap-datepicker/js/locales/bootstrap-datepicker.pt-BR.js"></script>
+        <!-- endbuild -->
+        <!-- build:js js/main.js -->
+        <script src="js/main.js"></script>
+        <!-- endbuild -->
     </body>
 </html>
