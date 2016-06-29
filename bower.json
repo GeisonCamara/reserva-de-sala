@@ -11,12 +11,10 @@
         "assets/stylesheets/_bootstrap.scss",
         "assets/fonts/bootstrap/*",
         "assets/javascripts/bootstrap.js",
-        "../bootstrap-adapted/modal.scss",
-        "../bootstrap-adapted/nav.scss",
-        "../jquery-ui/themes/smoothness/jquery-ui.scss",
-        "../bootstrap-tokenfield/sass/tokenfield-typeahead.scss",
-        "../bootstrap-tokenfield/sass/bootstrap-tokenfield.scss",
-        "../bootstrap-datepicker/sass/bootstrap-datepicker3.scss"
+        "../../app/style-adapted/nav.scss",
+        "../../app/style-adapted/modal.scss",
+        "../../app/style-adapted/filter.scss",
+        "../bootstrap-datepicker/dist/css/bootstrap-datepicker3.css"
       ]
     }
   }
