@@ -1,0 +1,14 @@
+/* Adaptação modal */
+
+#data, #filter-data{
+    background: #FFF;
+}
+div.tokenfield{
+	min-height: 34px;
+	max-height: 326px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.custom{
+    width: 230px;
+}
