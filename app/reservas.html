@@ -33,7 +33,31 @@
         <div class="col-sm-1"></div>
         <div class="col-sm-10">
             <div class="panel panel-default">
-                <div class="panel-heading">...</div>
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-sm-2" id="txt-filtro">
+                            <p>Filtrar por: </p>
+                        </div>
+                        <div class="col-sm-2">
+                            <select class="form-control" id="filter">
+                                <option value="data">Data</option>
+                                <option value="sala">Sala</option>
+                                <option value="responsavel">Responsável</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="filter-data" readonly />
+                            <select class="form-control" id="filter-sala">
+                                <option value="01">Sala de reuniões 01</option>
+                                <option value="02">Sala de reuniões 02</option>
+                            </select>
+                            <input type="text" class="form-control" id="filter-responsavel" />
+                        </div>
+                        <div class="col-sm-5">
+                            <button type="button" class="btn btn-default">Buscar</button>
+                        </div>
+                    </div>
+                </div>
                 <div class="panel-body">
                     <table class="table table-hover">
                         <thead>
