@@ -1,4 +1,4 @@
-<nav id="navbar" class="navbar navbar-default">
+<!--<nav id="navbar" class="navbar navbar-default">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
@@ -42,10 +42,6 @@
                                 <th>Horário</th>
                                 <th>Sala</th>
                                 <th>Responsável</th>
-                                <!--
-                                <th>Pauta</th>
-                                <th colspan="2">Modificar</th>
-                                -->
                             </tr>
                         </thead>
                         <tbody>
@@ -54,33 +50,18 @@
                                 <td>09:00 - 09:30</td>
                                 <td>Sala de reunião 02</td>
                                 <td>João</td>
-                                <!--
-                                <td>Implementação da campainha nova.</td>
-                                <td><i class="fa fa-pencil" aria-hidden="true"></i></td>
-                                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-                                -->
                             </tr>
                             <tr>
                                 <td>16/06/2016</td>
                                 <td>09:30 - 10:00</td>
                                 <td>Sala de reunião 02</td>
                                 <td>Marcelo</td>
-                                <!--
-                                <td>Escolha do sistema de reserva de sala.</td>
-                                <td><i class="fa fa-pencil" aria-hidden="true"></i></td>
-                                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-                                -->
                             </tr>
                             <tr>
                                 <td>16/06/2016</td>
                                 <td>08:30 - 09:00</td>
                                 <td>Sala de reunião 01</td>
                                 <td>Carlos</td>
-                                <!--
-                                <td>Sistema para reserva de salas.</td>
-                                <td><i class="fa fa-pencil" aria-hidden="true"></i></td>
-                                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-                                -->
                             </tr>
                         </tbody>
                     </table>
@@ -98,10 +79,6 @@
                                 <th>Horário</th>
                                 <th>Sala</th>
                                 <th>Responsável</th>
-                                <!--
-                                <th>Pauta</th>
-                                <th colspan="2">Modificar</th>
-                                -->
                             </tr>
                         </thead>
                         <tbody>
@@ -110,33 +87,18 @@
                                 <td>09:00 - 09:30</td>
                                 <td>Sala de reunião 02</td>
                                 <td>João</td>
-                                <!--
-                                <td>Implementação da campainha nova.</td>
-                                <td><i class="fa fa-pencil" aria-hidden="true"></i></td>
-                                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-                                -->
                             </tr>
                             <tr>
                                 <td>16/06/2016</td>
                                 <td>09:30 - 10:00</td>
                                 <td>Sala de reunião 02</td>
                                 <td>Marcelo</td>
-                                <!--
-                                <td>Escolha do sistema de reserva de sala.</td>
-                                <td><i class="fa fa-pencil" aria-hidden="true"></i></td>
-                                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-                                -->
                             </tr>
                             <tr>
                                 <td>16/06/2016</td>
                                 <td>08:30 - 09:00</td>
                                 <td>Sala de reunião 01</td>
                                 <td>Carlos</td>
-                                <!--
-                                <td>Sistema para reserva de salas.</td>
-                                <td><i class="fa fa-pencil" aria-hidden="true"></i></td>
-                                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-                                -->
                             </tr>
                         </tbody>
                     </table>
@@ -144,5 +106,84 @@
             </div>
         </div>
         <div class="col-sm-1"></div>
+    </div>
+</div>-->
+
+<nav id="navbar" class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <p><a id="brand-link" class="navbar-brand" href="#home"><i class="fa fa-briefcase fa-lg" aria-hidden="true"></i> Reserva de salas</a></p>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul id="nav-list" class="nav navbar-nav navbar-right">
+                <li class="active"><a href="reunioes"><i class="fa fa-calendar" aria-hidden="true"></i> Minhas reuniões</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#myModalReuniao"><i class="fa fa-ticket" aria-hidden="true"></i> Reservar sala</a></li>
+                <li><a href="reservas"><i class="fa fa-th-list" aria-hidden="true"></i> Consultar reservas</a></li>
+                <li id="btnSair"><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Sair</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row text-center">    
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <div class="well">
+                <h3>MINHAS REUNIÕES</h3>
+                  <div class="col-sm-4"></div>
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-5">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>Como requerinte:</strong></div>
+                <div class="panel-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Horário</th>
+                                <th>Horário</th>
+                                <th>Pauta</th>
+                                <th>Responsável</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reunioesRequerinte"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5">
+           <div class="panel panel-default">
+                <div class="panel-heading"><strong>Como participante:</strong></div>
+                <div class="panel-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Horário</th>
+                                <th>Sala</th>
+                                <th>Pauta</th>
+                                <th>Responsável</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reunioesParticipante"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+    <div id="apagar">
+        <div class="g-signin2" data-onsuccess="onSignIn" ></div>
     </div>
 </div>
