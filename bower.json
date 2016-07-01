@@ -14,7 +14,9 @@
         "../../app/style-adapted/nav.scss",
         "../../app/style-adapted/modal.scss",
         "../../app/style-adapted/filter.scss",
-        "../bootstrap-datepicker/dist/css/bootstrap-datepicker3.css"
+        "../../app/style-adapted/bootstrap-datepicker3.scss",
+        "../../app/style-adapted/tokenfield-typeahead.scss",
+        "../../app/style-adapted/bootstrap-tokenfield.scss"
       ]
     }
   }

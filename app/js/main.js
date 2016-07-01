@@ -110,7 +110,12 @@ function datePicker(){
 	});
 }
 
+function tokenfield(){
+    $('#participantes').tokenfield();
+}
+
 $(document).ready(function () {
 	filter();
 	datePicker();
+    tokenfield();
 });
