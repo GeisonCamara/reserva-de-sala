@@ -30,8 +30,7 @@ function deslogar() {
 }
 
 function openWin() {
-    var myWindow;
-    myWindow = window.open("https://accounts.google.com/logout", "_blank", "width=10,height=10");
+    var myWindow = window.open("https://accounts.google.com/logout", "_blank", "width=10,height=10");
     setTimeout(function(){
         myWindow.close();
     }, 500);
