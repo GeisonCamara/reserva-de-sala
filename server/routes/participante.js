@@ -1,5 +1,5 @@
 var express = require('express');
-var Busca = express.Router();
+var Participante = express.Router();
 //var Reserva = getmodule('api/api');
 
 //CONEXAO SERVER.
@@ -13,10 +13,11 @@ var connection = mysql.createConnection({
 });
 
 //Busca minhas reuniões
-Busca.get('/:email', function(req, res){
-    var email = req.params.email;
-    connection.query('SELECT dia, horarios.hora, salas.nomeSala, pauta, usuarios.nome FROM reunioes INNER JOIN usuarios ON reunioes.responsavelId = usuarios.id INNER JOIN salas ON reunioes.salasId = salas.id INNER JOIN horarios ON reunioes.horariosId = horarios.id WHERE usuarios.email LIKE ?',[email + '%'],function(err,result){
-        buildTable(result, req, res);
+Participante.get('/:nome', function(req, res){
+    var nome = req.params.nome;
+    connection.query('SELECT dia, horarios.hora, salas.nomeSala, pauta, usuarios.nome FROM reunioes INNER JOIN usuarios ON reunioes.responsavelId = usuarios.id INNER JOIN salas ON reunioes.salasId = salas.id INNER JOIN horarios ON reunioes.horariosId = horarios.id WHERE reunioes.integranteId LIKE ?',[nome + '%'],function(err,result){
+        console.log(result);
+        //buildTable(result, req, res);
     });
 });
 
@@ -34,4 +35,4 @@ function buildTable(result, req, res){
    res.send(items);
 }
 
-module.exports = Busca;
+module.exports = Participante;
