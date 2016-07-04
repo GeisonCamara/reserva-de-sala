@@ -121,13 +121,31 @@
         <div class="navbar-collapse collapse">
             <ul id="nav-list" class="nav navbar-nav navbar-right">
                 <li><a href="reunioes"><i class="fa fa-calendar" aria-hidden="true"></i> Minhas reuniões</a></li>
-                <li><a href="#" data-toggle="modal" data-target="#myModalReuniao"><i class="fa fa-ticket" aria-hidden="true"></i> Reservar sala</a></li>
+                <li><a href="#" id="btnRequisicao" data-toggle="modal" data-target="#myModalReuniao"><i class="fa fa-ticket" aria-hidden="true"></i> Reservar sala</a></li>
                 <li class="active"><a href="reservas"><i class="fa fa-th-list" aria-hidden="true"></i> Consultar reservas</a></li>
                 <li id="btnSair"><a href="http://localhost:9000/login"><i class="fa fa-sign-out" aria-hidden="true"></i> Sair</a></li>
             </ul>
         </div>
     </div>
 </nav>
+<!-- Modal -->
+<div class="modal fade" id="modalDelete" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title text-center">ATENÇÃO!</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p>Deseja apagar esta reunião?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="botaoApagar" class="btn btn-default btn-danger" data-dismiss="modal">Excluir</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container-fluid">
     <div class="row text-center">    
         <div class="col-sm-1"></div>
@@ -156,14 +174,11 @@
                         </div>
                         <div class="col-sm-3">
                             <input type="text" class="form-control" id="filter-data" readonly />
-                            <select class="form-control" id="filter-sala">
-                                <option value="01">Sala de reuniões 01</option>
-                                <option value="02">Sala de reuniões 02</option>
-                            </select>
+                            <select class="form-control" id="filter-sala"></select>
                             <input type="text" class="form-control" id="filter-responsavel" />
                         </div>
                         <div class="col-sm-5">
-                            <button type="button" class="btn btn-default">Buscar</button>
+                            <button type="button" class="btn btn-default" id="botao">Buscar</button>
                         </div>
                     </div>
                 </div>
@@ -175,39 +190,11 @@
                                 <th>Horário</th>
                                 <th>Sala</th>
                                 <th>Responsável</th>
-                                <th>Pauta</th>
+                                <th>Participantes</th>
                                 <th colspan="2">Modificar</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>16/06/2016</td>
-                                <td>09:00 - 09:30</td>
-                                <td>Sala de reunião 02</td>
-                                <td>João</td>
-                                <td>Implementação da campainha nova.</td>
-                                <td><i class="fa fa-pencil" aria-hidden="true"></i></td>
-                                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-                            </tr>
-                            <tr>
-                                <td>16/06/2016</td>
-                                <td>09:30 - 10:00</td>
-                                <td>Sala de reunião 02</td>
-                                <td>Marcelo</td>
-                                <td>Escolha do sistema de reserva de sala.</td>
-                                <td><i class="fa fa-pencil" aria-hidden="true"></i></td>
-                                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-                            </tr>
-                            <tr>
-                                <td>16/06/2016</td>
-                                <td>08:30 - 09:00</td>
-                                <td>Sala de reunião 01</td>
-                                <td>Carlos</td>
-                                <td>Sistema para reserva de salas.</td>
-                                <td><i class="fa fa-pencil" aria-hidden="true"></i></td>
-                                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
-                            </tr>
-                        </tbody>
+                        <tbody id="tabelaReservas"></tbody>
                     </table>
                 </div>
             </div>

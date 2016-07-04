@@ -7,7 +7,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
    host     : 'localhost',
    user     : 'root',
-   password : '123456',
+   password : 'root12345',
    port : 3306, //port mysql
    database:'api'
 });
@@ -23,7 +23,7 @@ Busca.get('/:email', function(req, res){
 
 function buildTable(result, req, res){
    var items= '<tr>';
-   for(var z=0;z<result.length;z++){
+   for(var z=0; z<result.length; z++){
        items+= '<td>' + result[z].dia+ '</td>';
        items+= '<td>' + result[z].hora + '</td>';
        items+= '<td>' + result[z].nomeSala + '</td>';

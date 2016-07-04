@@ -8,7 +8,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
    host     : 'localhost',
    user     : 'root',
-   password : '123456',
+   password : 'root12345',
    port : 3306, //port mysql
    database:'api'
 });
@@ -20,8 +20,6 @@ Inserir.post('/:data/:pauta/:participantes/:responsavel/:sala/:horario', functio
     //var sala = req.params.sala.replace(/%20/gi, " ");
     var sala = req.params.sala;
     var hora = req.params.horario;
-    console.log(sala);
-    console.log(hora);
 
     //connection.query('SET @sala = (SELECT id FROM salas WHERE nomeSala LIKE ?)',[sala + '%'],function(err,result){
       connection.query('SET @responsavel = (SELECT id FROM usuarios WHERE nome LIKE ?)',[responsavel + '%'],function(err,result){

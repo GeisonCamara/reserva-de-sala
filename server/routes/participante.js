@@ -7,7 +7,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
    host     : 'localhost',
    user     : 'root',
-   password : '123456',
+   password : 'root12345s',
    port : 3306, //port mysql
    database:'api'
 });
@@ -16,7 +16,6 @@ var connection = mysql.createConnection({
 Participante.get('/:nome', function(req, res){
     var nome = req.params.nome;
     connection.query('SELECT dia, horarios.hora, salas.nomeSala, pauta, usuarios.nome FROM reunioes INNER JOIN usuarios ON reunioes.responsavelId = usuarios.id INNER JOIN salas ON reunioes.salasId = salas.id INNER JOIN horarios ON reunioes.horariosId = horarios.id WHERE reunioes.integranteId LIKE ?',[nome + '%'],function(err,result){
-        console.log(result);
         //buildTable(result, req, res);
     });
 });
