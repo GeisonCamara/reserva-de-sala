@@ -31,7 +31,7 @@ function deslogar() {
 
 function openWin() {
     var myWindow;
-    myWindow = window.open("https://accounts.google.com/logout", "myWindow", "width=10,height=10");
+    myWindow = window.open("https://accounts.google.com/logout", "_blank", "width=10,height=10");
     setTimeout(function(){
         myWindow.close();
     }, 500);
@@ -115,7 +115,7 @@ function tokenfield(){
 }
 
 $(document).ready(function () {
-	filter();
+    filter();
 	datePicker();
     tokenfield();
 });
